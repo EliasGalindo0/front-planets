@@ -19,8 +19,9 @@ const Home = () => {
       const dataCharacters = await resCharacters.json();
       setCharacters(dataCharacters.results);
 
-      const resPlanets = await fetch("/api/planets");
+      const resPlanets = await fetch("/api/planets/");
       const dataPlanets = await resPlanets.json();
+
       setPlanets(dataPlanets.results);
     };
 
@@ -34,10 +35,10 @@ const Home = () => {
     : characters;
 
   return (
-    <div className="container">
+    <main className="container">
       <FilterNav planets={planets} setFilteredPlanet={setFilteredPlanet} />
       <CharacterList characters={filteredCharacters} planets={planets} />
-    </div>
+    </main>
   );
 };
 

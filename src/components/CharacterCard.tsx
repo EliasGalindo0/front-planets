@@ -4,9 +4,9 @@ import React from "react";
 const CharacterCard = ({ character, homeworld }: any) => {
   return (
     <div className="character-card">
-      <Image src={`https://picsum.photos/200/300`} alt={character.name} />
+      {/* <Image src={url} alt={character.name} width={200} height={200} /> */}
       <h3>{character.name}</h3>
-      <p>Homeworld: {homeworld.name}</p>
+      <p>Homeworld: {homeworld}</p>
     </div>
   );
 };
